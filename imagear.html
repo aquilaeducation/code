@@ -4,9 +4,9 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@0.3.1/dist/mindar.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@0.3.1/examples/assets/card-example/card.mind; showStats: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar="imageTargetSrc: https://cdn.glitch.com/e9808846-d01c-4dea-bedd-8c3acad5eea3%2FAquilaLogo_targets.mind?v=1624691439590; showStats: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@0.3.1/examples/assets/card-example/card.png" />
+        <!-- <img id="card" src="https://cdn.glitch.com/e9808846-d01c-4dea-bedd-8c3acad5eea3%2FAquilalogo1.jpg?v=1624691910852" /> -->
         <a-asset-item id="avatarModel" src="https://cdn.glitch.com/a75ef111-c090-4f34-8c0a-0d7d8561a366%2FTiger.glb?v=1622270017804"></a-asset-item>
       </a-assets>
 
@@ -14,7 +14,7 @@
 
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.0 1.0 1.0" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.0 1.0 1.0" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: false; dir: alternate">
       </a-entity>
     </a-scene>
   </body>
