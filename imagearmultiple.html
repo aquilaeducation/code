@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@0.4.2/dist/mindar.prod.js"></script>
+  </head>
+
+  <body>
+    <a-scene mindar="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@0.4.2/examples/assets/band-example/band.mind; showStats: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+    <a-asset-item id="eames" src="https://cdn.glitch.com/111e59b3-1763-4a17-8c7e-317b7588e0f4%2Feames.glb?v=1624033070604"></a-asset-item>
+    <a-asset-item id="starry" src="https://cdn.glitch.com/111e59b3-1763-4a17-8c7e-317b7588e0f4%2FStarryNight.glb?v=1624542295067"></a-asset-item>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.5 0.5 0.5" src="#eames" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.5 0.5 0.5" src="#starry" animation-mixer>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
