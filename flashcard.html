@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accordion Menu Example</title>
+    <style>
+      /* Style the accordion container */
+      .accordion {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      /* Style the accordion button */
+      .accordion button {
+        width: 100%;
+        padding: 16px;
+        text-align: left;
+        background-color: #eee;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        color: #333;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Style the active accordion button */
+      .accordion button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the accordion panel */
+      .accordion .panel {
+        width: 100%;
+        padding: 16px;
+        display: none;
+        background-color: white;
+      }
+
+      /* Style the active accordion panel */
+      .accordion button.active + .panel {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <button>Section 1</button>
+      <div class="panel">
+        <p>Content for section 1.</p>
+      </div>
+
+      <button>Section 2</button>
+      <div class="panel">
+        <p>Content for section 2.</p>
+      </div>
+
+      <button>Section 3</button>
+      <div class="panel">
+        <p>Content for section 3.</p>
+      </div>
+    </div>
+
+    <script>
+      // Get all the accordion buttons
+      const accordionButtons = document.querySelectorAll('.accordion button');
+
+      // Add event listeners to each button
+      accordionButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          // Toggle the active class on the button
+          button.classList.toggle('active');
+
+          // Get the panel associated with the button
+          const panel = button.nextElementSibling;
+
+          // Toggle the display of the panel
+          if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+          } else {
+            panel.style.display = 'block';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
